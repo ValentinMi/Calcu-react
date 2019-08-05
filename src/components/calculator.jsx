@@ -82,7 +82,7 @@ const Calculator = () => {
       <div className="keyboard">
         <div>
           <button onClick={() => handleClear()} className="clear-btn">
-            clear
+            CLEAR
           </button>
           <div className="nbr-btn">
             {nbrButtons.map(nbr => (
@@ -104,7 +104,7 @@ const Calculator = () => {
               handleClick={() => handleOpeClick(btn.name)}
             />
           ))}
-          <button className="equal-btn" onClick={() => handleResult()}>
+          <button className="equal-btn btn" onClick={() => handleResult()}>
             =
           </button>
         </div>

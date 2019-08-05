@@ -1,17 +1,22 @@
 .calculator {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background: #3f3b53;
+  height: 100vh;
+  padding-top: 5vh;
 }
 
 .keyboard {
   display: flex;
+  width: 800px;
 }
 
 .screen {
   width: 800px;
   height: 200px;
   color: white;
-  background: #433437;
+  background: #221f2e;
   font-size: 5em;
   text-align: end;
 }
@@ -27,16 +32,15 @@ button {
 
 .clear-btn {
   width: 600px;
-  background: white;
+  background: #2eb8e7;
   font-size: 3em;
-  color: grey;
-  border-left: 1px solid #921029;
+  border-left: 1px solid black;
 }
 
 .ope-btn > button {
-  background: #f2274f;
   border-left: none;
-  font-size: 3em;
+  font-size: 4em;
+  background: #7961f3;
 }
 
 .ope-btn {
@@ -49,16 +53,23 @@ button {
   grid-template-columns: 200px 200px 200px;
   grid-template-rows: 200px 200px 200px;
   grid-template-areas: ". . ." ". . ." ". . .";
-  border-bottom: 1px solid #921029;
-  border-left: 1px solid #921029;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
 }
 
 .nbr-btn > button {
-  background: white;
+  background: #2f2b3f;
+  color: white;
+  font-size: 3em;
 }
 
 .equal-btn {
   width: 400px;
   position: relative;
   left: -50%;
+  background: #2eb8e7 !important;
+}
+
+.btn {
+  border-radius: 0 !important;
 }
