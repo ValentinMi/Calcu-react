@@ -1,0 +1,64 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+}
+
+.keyboard {
+  display: flex;
+}
+
+.screen {
+  width: 800px;
+  height: 200px;
+  color: white;
+  background: #433437;
+  font-size: 5em;
+  text-align: end;
+}
+
+button {
+  height: 200px;
+  width: 200px;
+  border-top: 1px solid #921029;
+  border-right: 1px solid #921029;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.clear-btn {
+  width: 600px;
+  background: white;
+  font-size: 3em;
+  color: grey;
+  border-left: 1px solid #921029;
+}
+
+.ope-btn > button {
+  background: #f2274f;
+  border-left: none;
+  font-size: 3em;
+}
+
+.ope-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.nbr-btn {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-areas: ". . ." ". . ." ". . .";
+  border-bottom: 1px solid #921029;
+  border-left: 1px solid #921029;
+}
+
+.nbr-btn > button {
+  background: white;
+}
+
+.equal-btn {
+  width: 400px;
+  position: relative;
+  left: -50%;
+}
