@@ -1,3 +1,6 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:600&display=swap");
+
 .calculator {
   display: flex;
   flex-direction: column;
@@ -35,17 +38,29 @@ button {
   background: #2eb8e7;
   font-size: 3em;
   border-left: 1px solid black;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+}
+
+.clear-btn:hover {
+  color: white;
+}
+
+.ope-btn {
+  display: flex;
+  flex-direction: column;
 }
 
 .ope-btn > button {
   border-left: none;
   font-size: 4em;
   background: #7961f3;
+  transition-duration: 0.5s;
 }
 
-.ope-btn {
-  display: flex;
-  flex-direction: column;
+.ope-btn > button:hover {
+  border: 2px solid white;
+  transition-duration: 0.5s;
 }
 
 .nbr-btn {
@@ -61,6 +76,10 @@ button {
   background: #2f2b3f;
   color: white;
   font-size: 3em;
+}
+
+.nbr-btn > button:hover {
+  color: #2eb8e7;
 }
 
 .equal-btn {

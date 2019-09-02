@@ -10,6 +10,11 @@ const Calculator = () => {
   const [operator, setOperator] = useState("");
   const [screenValue, setScreenValue] = useState(0);
 
+  useEffect(() => {
+    // Update the screen after each change
+    setScreenValue(value1 + " " + operator + " " + value2);
+  }, [value1, operator, value2]);
+
   const opeButtons = [
     { name: "+" },
     { name: "-" },
@@ -20,7 +25,7 @@ const Calculator = () => {
   const nbrButtons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "."];
 
   const handleResult = () => {
-    if (operator === "") return console.log("no ope");
+    if (operator === "") return;
     let result;
     let float1 = parseFloat(value1);
     let float2 = parseFloat(value2);
@@ -53,7 +58,7 @@ const Calculator = () => {
       setValue1(`${value1}${value}`);
       setScreenValue(value);
     } else {
-      // If ope set value2 and refresh screen with ope
+      // If an operator is selected then set value2 and refresh screen with operator
       setValue2(`${value2}${value}`);
     }
   };
@@ -65,16 +70,11 @@ const Calculator = () => {
   };
 
   const handleClear = () => {
-    // Reset to initial states
+    // Reset to initial states --> clear screen
     setValue1("");
     setValue2("");
     setOperator("");
   };
-
-  useEffect(() => {
-    // Update the screen after each change
-    setScreenValue(value1 + " " + operator + " " + value2);
-  }, [value1, operator, value2]);
 
   return (
     <div className="calculator">
@@ -99,8 +99,6 @@ const Calculator = () => {
             <OpeButton
               key={btn.name}
               name={btn.name}
-              func={btn.func}
-              className={btn.className}
               handleClick={() => handleOpeClick(btn.name)}
             />
           ))}
